@@ -1,0 +1,228 @@
+.header {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(135, 193, 121, 0.9) 0%, #87c179 50%, rgba(135, 193, 121, 0.9) 100%);
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+}
+@media(min-width:1500px){
+  .header::before {
+    content: "";
+    background: url(/src/img/details.png);
+    position: absolute;
+    left: 0;
+    top: -5px;
+    background-size: contain;
+    width: 100%;
+    height: 89px;
+    background-repeat: no-repeat;
+  }
+  .header::after {
+    content: '';
+    background: url(/src/img/details.png) !important;
+    width: 145px;
+    height: 89px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  }
+.menu-items a {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 17px !important;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Transparent header for the home/index page */
+.header.index {
+  background-color: transparent;
+  box-shadow: none;
+}
+/* Non-transparent header for other pages */
+.header.not-index {
+  background-color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header.scrolled.not-index {
+  position: fixed;
+}
+.header.scrolled .close-menu {
+  top: -53px;
+}
+.header.scrolled.index {
+	background-color: #000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header.index {
+  position: fixed;
+}
+
+.header.scrolled {
+  background-color: #000;
+}
+.header-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 22.9px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 9;
+}
+.scrolled  .logo-image {
+	max-width: 120px !important;
+}
+.header-menu {
+  display: flex;
+}
+
+.menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-items li {
+  margin-left: 40px;
+}
+
+
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.hamburger .bar {
+  display: block;
+  background-color: #000;
+  height: 2px;
+  width: 25px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger:hover .bar {
+  background-color: #3ab8eb;
+}
+
+.close-icon {
+  display: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.header-menu.open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #000;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+.header-menu.open .menu-items {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu.open .menu-items li {
+  margin-left: 0;
+  border-bottom: 1px solid #fff;
+}
+
+.header-menu.open .menu-items li:last-child {
+  border-bottom: none;
+}
+
+.header-menu.open .menu-items a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.close-menu {
+	background: #0000;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+	font-size: 42px;
+	height: 30px;
+	line-height: 0 !important;
+	padding: 0;
+	position: absolute;
+	right: 20px;
+	top: -53px;
+}
+.close-menu {
+
+	color: #000;
+}
+
+@media (max-width: 1199px) {
+  .header-menu {
+    display: none;
+  }
+  .hamburger {
+    margin-top: 0 !important;
+  }
+  .header-menu.open {
+    display: block;
+    max-width: 100%;
+    right: 0;
+    top: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+  .header.scrolled .close-menu {
+    top: -70px !important;
+  }
+  .close-menu {
+    display: block;
+  }
+  .header-menu.open .menu-items a {
+    display: block;
+    padding: 15px 20px;
+    color: rgba(135, 193, 121, 1);
+    font-size: 15px;
+  }
+  .header-menu.open button:hover {
+    color: #fff !important;
+    background: unset !important;
+  }
+  .hamburger:hover {
+    background: unset !important;
+    color: #fff !important;
+  }
+  .hamburger:hover .bar {
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+}

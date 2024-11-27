@@ -1,0 +1,81 @@
+.slick-slider-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect width calculations */
+}
+.slick-initialized .slick-slide {
+	display: block;
+	padding: 15px;
+}
+.slick-list {
+  display: flex;
+  gap: 15px; /* Space between slides */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9; /* Adjust based on your image's aspect ratio */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image spans the full width */
+  height: 100%; /* Keep it within the aspect ratio container */
+  object-fit: cover; /* Crop to fit if necessary */
+}
+
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.slick-center .overlay {
+  display: none; /* Hide overlay for the center slide */
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 100;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: '◁'; /* Customize arrows */
+  font-size: 40px;
+  color: white;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+
+
+
+

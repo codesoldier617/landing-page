@@ -1,0 +1,113 @@
+.trw {
+  display: flex;
+  gap: 20px;
+}
+.trw div {
+  flex: 1;
+}
+.form-group input, select {
+	background: #fff;
+	border: 0;
+	padding: 15px 20px;
+	max-width: 100% !important;
+	width: 100%;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 2px;
+	font-family: "Montserrat", sans-serif;
+	border: 1px solid #3ab8eb;
+	border-radius: 4px;
+}
+.formrow02 .bs01 {
+	background: #fff;
+	border-radius: 20px;
+	margin-top: -75px;
+	padding: 30px;
+	box-shadow: 0 0 34px rgba(0,0,0,.12);
+}
+.form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  display: block !important;
+  margin-bottom: 5px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.subbtn {
+  text-align: center;
+}
+.subbtn button {
+  background: #3ab8eb;
+  font-size: 20px;
+  padding: 10px 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.subbtn button:hover {
+  background: #3ab8ebc4;
+}
+.scmsg {
+  text-align: center;
+  margin-top: 15px !important;
+  font-weight: 500;
+  color: #003723;
+  font-size: 17px !important;
+}
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 15px !important;
+  font-weight: 500;
+  text-align: center;
+}
+.homerow4.pricingrow2 {
+  padding-bottom: 60px;
+}
+.form-group option {
+  padding: 5px !important;
+  font-size: 16px !important;
+}
+@media (max-width: 767px) {
+  .form-group input,
+  select {
+    background: #efefef;
+    border: 0;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+  }
+  .form-group label {
+    font-size: 16px !important;
+  }
+  .trw {
+    display: block !important;
+    gap: 20px;
+  }
+  .subbtn button {
+    background: #3ab8eb;
+    font-size: 17px;
+  }
+}
+@media(min-width:768px) and (max-width:1024px){
+  .form-group input, select {
+    background: #fff;
+    border: 0;
+    padding: 12px 20px;
+  }
+  .form-group input,
+  select {
+    background: #efefef;
+    border: 0;
+    padding: 12px 20px !important;
+    font-size: 17px !important;
+  }
+  .form-group label {
+    font-size: 17px !important;
+  }
+  .subbtn button {
+    background: #3ab8eb;
+    font-size: 18px;
+  }
+}
